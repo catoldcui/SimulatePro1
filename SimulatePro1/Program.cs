@@ -19,11 +19,6 @@ namespace SimulatePro1
             //Dict dict = Dict.GetInstance();
             //dict.initDict();
 
-            PYTool pytool = PYTool.GetInstance();
-            string str = Console.ReadLine();
-            string pinyin = pytool.GetPY("");
-            Console.WriteLine(pinyin);
-
             //Dict dict = Dict.GetInstance();
             //dict.initDict();
             //dict.SaveWordsToFile();

@@ -141,10 +141,11 @@ namespace SimulatePro1.Pinyin
                 else
                 {
                     // 单个多音字,靠输出每次把单个读音放到第一个
-                    Console.WriteLine("单个多音字出现了，“" + word + "”,依照读音，看是否调节词库");
+                    Console.WriteLine("1003:单个多音字出现了，“" + word + "”,目前读作“" + list.ElementAt(0).Value + "”");
                 }
             }
-               
+
+            Console.WriteLine("“" + word + "”目前读作“" + tempPY + "”");
             finalPY += tempPY;
 
             finalPY = addbefore + ConvertSymbols(finalPY) + addafter;
@@ -211,7 +212,7 @@ namespace SimulatePro1.Pinyin
             else
             {
                 isPolyphone = false;
-                Console.WriteLine("1001:没有“" + str + "”字");
+                
             }
 
             return new KeyValuePair<bool, string>(isPolyphone, pinyin);
@@ -252,6 +253,7 @@ namespace SimulatePro1.Pinyin
                     }
                     catch (Exception e)
                     {
+                        charOfPhone = '_';
                         continue;
                     }
                 }

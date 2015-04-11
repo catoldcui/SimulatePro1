@@ -52,7 +52,7 @@ namespace SimulatePro1.Pinyin
         public ICollection<WordInfo> DoSegment(string text){
             ICollection<WordInfo> words = segment.DoSegment(text);
 
-            Console.Write("分词结果");
+            Console.Write("分词结果：");
             foreach (WordInfo w in words)
             {
                 Console.Write(w.Word + " ");
